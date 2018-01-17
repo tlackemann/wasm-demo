@@ -9,7 +9,7 @@ fn say_hello(name: String) -> String {
 }
 
 fn run_program(input: String) -> String {
-    let (_, result) = parse_step_p(b"!r 1d20").unwrap();
+    let (_, result) = parse_step_p(input.as_bytes()).unwrap();
     serde_json::to_string(&result).unwrap()
 }
 

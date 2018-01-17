@@ -8,7 +8,9 @@
     <script>
       Rust.wasm_demo.then(function (wasm) {
         console.log(wasm.hello('Node NYC'))
-        console.log(wasm.run_program('#name !roll 1d20'))
+        console.log(JSON.parse(wasm.run_program('!roll 1d20')))
+        console.log(JSON.parse(wasm.run_program('$variable = 42.5 |')))
+        console.log(JSON.parse(wasm.run_program('@me.name = "Henry"')))
       })
     </script>
   </body>
