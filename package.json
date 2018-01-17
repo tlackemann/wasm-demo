@@ -1,0 +1,16 @@
+{
+  "name": "wasm-demo",
+  "version": "1.0.0",
+  "description": "A small demo to show WebAssembly and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "cargo-web build --target-webasm && cp target/wasm32-unknown-unknown/release/wasm-demo.{wasm,js} .",
+    "serve": "http-server",
+    "test": "ava"
+  },
+  "author": "Thomas Lackemann",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

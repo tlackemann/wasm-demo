@@ -1,0 +1,15 @@
+<!doctype>
+<html>
+  <head>
+    <title>WASM Demo</title>
+  </head>
+  <body>
+    <script src="/wasm-demo.js"></script>
+    <script>
+      Rust.wasm_demo.then(function (wasm) {
+        console.log(wasm.hello('Node NYC'))
+        console.log(wasm.run_program('#name !roll 1d20'))
+      })
+    </script>
+  </body>
+</html>
